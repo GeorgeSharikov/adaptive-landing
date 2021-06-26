@@ -1,0 +1,243 @@
+@import "_base.sass"
+@import "_fonts.sass"
+
+.container
+	max-width: $containerWidth
+	margin: 0 auto
+	padding: 0px 30px
+
+
+.header
+	.container
+		max-width: 995px	
+.main-header
+	line-height: 1
+	width: 100%
+	display: flex
+	padding: 35px 0px
+	justify-content: space-between
+	border-bottom: 1px black solid
+	&__item
+		transition: color .25s ease
+		&:hover
+			color: black
+	.header-menu__item-active
+		color: black
+
+.info
+	color: black
+	.container
+		padding-top: 43px
+	&__body
+		max-height: 721px
+		box-sizing: content-box
+		padding-bottom: 102px
+	&__name
+		position: relative
+		max-width: 100%
+		margin-bottom: 54px
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		align-items: end
+		text-align: left
+		:nth-child(2)
+			font-family: 'Gilroy-Medium'
+			margin-left: 32.0512820513%
+		:nth-child(3)
+			font-family: 'Gilroy-Medium'
+			text-align: right
+		h1
+			font-size: 47px
+			line-height: 1
+	&__language
+		position: absolute
+		right: 1px
+		display: inline-block
+		width: 30px
+		transform: rotate(90deg)
+	&__image
+		max-width: $containerWidth
+		img
+			width: 100%
+			max-height: 478px
+	&__main-photo
+		display: block
+	&__adaptive
+		display: none
+
+.about
+	color: black
+	background-color: #F6F6F6
+	&__body
+		min-height: 506px
+		box-sizing: border-box
+		padding-top: 120px
+		text-align: center
+		line-height: 1
+		h1
+			font-size: 34px
+			margin-bottom: 36px
+		p
+			font-family: 'Gilroy-Medium'
+			margin-bottom: 52px
+
+.adaptive-p
+	display: none
+
+.skills
+	color: black
+	&__body
+		min-height: 612px
+		padding-top: 93px
+	&__title
+		text-align: center
+		h1
+			font-size: 34px
+			margin-bottom: 70px
+		p
+			font-family:'Gilroy-Medium'
+			margin-bottom: 92px
+	&__list	
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		justify-content: space-between
+		padding-bottom: 114px
+		:nth-child(4)
+			p
+				margin-bottom: 57px
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		img
+			margin-bottom: 24px
+			width: 88px
+			height: 88px
+		p
+			text-align: center
+			color: $mainColor
+			line-height: 1
+			margin-bottom: 40px
+
+.skills__img
+	transition: transform 0.5s ease
+	&:hover
+			transform: scale(1.06)
+
+.raiting-wrapper
+	position: relative
+	display: inline-block
+	font-size: 35px
+	&::before
+		content: '★★★★★'
+		display: block
+
+.item
+	&__raiting
+		height: 100%
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+		display: flex
+		flex-direction: row-reverse
+		overflow: hidden
+	&__input
+		height:0%
+		width: 0%
+		position: absolute
+		top: 0
+		left: 0
+		visibility: hidden
+		&:checked,
+		&:checked ~ .item__label
+			color: black
+	&__label
+		flex: 0 0 20%
+		height: 100%
+		cursor: pointer
+		color: #E5E5E5
+		&::before
+			content: '★'
+			display: block
+			transition: color 0.3s ease 0s
+		&:hover, 
+		&:hover ~ &,
+		&:checked ~ &:hover
+			color: black
+
+.portfolio
+	background-color: #F6F6F6
+	color: black
+	padding-top: 114px
+	&__body
+		text-align: center
+		max-height: 2253px
+		padding-bottom: 99px
+	&__title
+		font-size: 34px
+		margin-bottom: 62px
+	&__item
+		max-width: $containerWidth
+		margin-bottom: 107px
+	&__img
+		width: 100%
+		margin-bottom: 45px
+		border: 1px solid black
+	&__link
+		color: black
+		text-decoration: underline
+
+.footer
+	color: black
+.main-footer
+	box-sizing: border-box
+	padding-top: 118px
+	min-height: 623px
+	text-align: center
+	:nth-child(3)
+		color: $mainColor
+		line-height: 1
+	&__text
+		h1
+			font-size: 34px
+			font-weight: 800
+			margin-bottom: 37px
+		p
+			font-weight: 500
+			line-height: 1
+			font-family: 'Gilroy-Medium'
+			margin-bottom: 37px	
+
+.text
+	&__button
+		font-size: 17px
+		background-color: black
+		border: 1px solid black
+		border-radius: 20px
+		color: white
+		padding: 13px 35px
+		cursor: pointer
+.icons
+	margin: 0 auto
+	margin-top: 85px
+	margin-bottom: 46px
+	display: flex
+	width: 220px
+	min-width: 220px
+	justify-content: center
+	:nth-child(4)
+			margin-right: 0px
+	&__item
+		flex: 1 2 50px
+		margin-right: 60px
+		width: 40px
+		height: 40px
+		cursor: pointer
+		transition: transform 0.5s ease
+		&:hover
+			transform: scale(1.05)
+
+
+@import "_media.sass"

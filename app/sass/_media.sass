@@ -1,0 +1,215 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+ 
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+	.burger-active
+		.container
+			overflow: hidden
+		.main-header
+			left:  0
+		.header
+			&__icon
+				position: absolute
+				right: 66px
+				top: 66px
+				width: 24px
+				height: 24px
+				z-index: 20
+				transition: all 0.5s ease
+				&::before,&::after
+					position: absolute
+					content: ''
+					height: 24px
+					left: 15px
+					width: 2px
+					background-color: #828282
+				&::before
+					transform: rotate(45deg)
+				&::after
+					transform: rotate(-45deg)
+				span
+					display: none
+
+	.header
+		&__icon
+			z-index: 5
+			display: block
+			position: absolute
+			width: 30px
+			height: 18px
+			cursor: pointer
+			top: 80px
+			right: 30px
+			transition: all 0.5s ease
+			&::before,&::after,span
+				right: 0
+				position: absolute
+				height: 10%
+				width: 100%
+				transition: all 0.3s ease 0s
+				background-color: black  
+			&::before,&::after
+				content: ""
+			&::before
+				top: 0
+			&::after
+				bottom: 0
+			span
+				top: 50%
+				transform: translate(0px, -50%)
+	.main-header
+		position: fixed
+		display: block
+		top: 0
+		left: -200%
+		width: 100%
+		min-height: 100vh
+		transition: left 0.8s ease
+		background-color: rgba(0, 0, 0, 0.97)
+		z-index: 10
+		padding: 50px 0 0 50px
+		&__item
+			display: block
+			width: 120px
+			padding: 15px
+			font-size: 24px
+		.header-menu__item-active
+			font-size: 24px
+			color: white
+	.info
+		.container
+			padding-top: 68px
+		&__name
+			display: grid
+			grid-template-rows: 1fr 62px
+			grid-template-columns: 1fr 
+			h1
+				margin-bottom: 34px
+			:nth-child(2)
+				margin-left: 0px
+	.skills
+		&__body
+			padding-top: 80px
+		&__title
+			h1
+				margin-bottom: 50px
+			p
+				margin-bottom: 80px
+		&__list
+			grid-template-columns: repeat(2, 1fr)
+			padding-bottom: 102px
+			:nth-child(4)
+				p
+					margin-bottom: 20px
+		&__item
+			padding-bottom: 85px
+			img
+				margin-bottom: 10px
+			p
+				margin-bottom: 2px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.skills
+		&__list
+			grid-template-columns: 1fr
+			:nth-child(4)
+				p
+					margin-bottom: 5px
+		&__item
+			margin-bottom: 30px
+			img
+				margin-bottom: 10px
+
+	.info
+		&__name
+			margin-bottom: 44px
+			align-items: start
+		h1
+			margin-bottom: 34px
+		&__main-photo
+			display: none
+		&__adaptive
+			display: block
+
+	.about
+		&__body
+			padding-top: 84px
+			h1
+				margin-bottom: 45px
+
+	.adaptive-p
+		display: block
+		line-height: 1.2
+		font-family: 'Gilroy-Medium'
+		margin-bottom: 48px
+	.none-p
+		display: none
+
+	.portfolio
+		padding-top: 82px
+		&__body
+			padding-bottom: 88px
+		&__title
+			margin-bottom: 81px
+		&__img
+			margin-bottom: 35px
+		&__item
+			margin-bottom: 83px
+
+	.main-footer
+		padding-top: 85px
+	.text
+		&__button
+			width: 90%
+	.icons
+		&__item
+			margin-right: 46px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+
+
+
+
+
+
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
